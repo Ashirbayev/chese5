@@ -15,11 +15,11 @@ public class Main {
 
         for (int z = 0; z < 8; z++) {
             if (z == 0) {
-                 rowValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first row value (1-8)"));
+                 rowValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first row value (1-8)")); //первый ферзь устанавливаем сами
                  columnValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first column value (1-8)"));}
             else{
-                 rowValue = (int) ( Math.random() * 7 );
-                 columnValue = (int) ( Math.random() * 7 );
+                 rowValue = (int) ( Math.random() * 7 );// как я пончял для остальных тоже нет определенных мест расположения
+                 columnValue = (int) ( Math.random() * 7 );// и задается рандомно
             }
 
             int rowValueFinal = rowValue - 1;
@@ -28,7 +28,7 @@ public class Main {
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
                     if (i == rowValueFinal && j == columnValueFinal) {
-                        chessBoardArray[rowValue - 1][columnValue - 1] = 1;
+                        chessBoardArray[rowValue - 1][columnValue - 1] = 1;// 1 это ФЕРЗЬ
                     } else {
                         chessBoardArray[rowValue - 0][columnValue - 0] = 0;
 
