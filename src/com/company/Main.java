@@ -12,8 +12,10 @@ public class Main {
 
         int rowValue;
         int columnValue;
+        int scat = 0;
 
-        for (int z = 0; z < 8; z++) {
+        for (int z = 0; ; z++) {
+
             if (z == 0) {
                  rowValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first row value (1-8)")); //первый ферзь устанавливаем сами
                  columnValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first column value (1-8)"));}
@@ -27,13 +29,20 @@ public class Main {
 
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
-                    if (i == rowValueFinal && j == columnValueFinal) {
+                    if (i == rowValueFinal && j == columnValueFinal && rowValueFinal > 1 && columnValueFinal < 7 && chessBoardArray[i][j] != i &&  chessBoardArray[i][j] != j ) {
                         chessBoardArray[rowValue - 1][columnValue - 1] = 1;// 1 это ФЕРЗЬ
+                         scat++;
                     } else {
                         chessBoardArray[rowValue - 0][columnValue - 0] = 0;
 
+// chessBoardArray[i][j] != i &&  chessBoardArray[i][j] != j &&
                     }
+
+
                 }
+            }
+            if(scat == 8){
+                break;
             }
         }
 
@@ -94,6 +103,10 @@ public class Main {
                 System.out.println(chessBoardArray[7][k]);
             }
         }
+
+
+
+
 
     }
 
