@@ -18,8 +18,8 @@ public class Main {
                  rowValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first row value (1-8)")); //первый ферзь устанавливаем сами
                  columnValue = Integer.parseInt(JOptionPane.showInputDialog("Enter the first column value (1-8)"));}
             else{
-                 rowValue = (int) ( Math.random() * 7 );// как я пончял для остальных тоже нет определенных мест расположения
-                 columnValue = (int) ( Math.random() * 7 );// и задается рандомно
+                 rowValue = (int) ( 1+Math.random() * 7);// как я пончял для остальных тоже нет определенных мест расположения
+                 columnValue = (int) ( 1+Math.random() * 7 );// и задается рандомно
             }
 
             int rowValueFinal = rowValue - 1;
